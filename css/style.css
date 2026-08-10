@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+header p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+
+.logo{
+    width: 250px;
+    border-radius: 500px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 15px;
+}
+
+.servicios {
+    background-color: #F1F5F9;
+    padding: 70px 20px;
+}
+
+.titulo-servicios {
+    text-align: center;
+    font-size: 36px;
+    color: #0F172A;
+    margin-bottom: 40px;
+}
+
+.contenedor-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: white;
+    color: #0F172A;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #38BDF8;
+    border-top: 4px solid #38BDF8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: #0F172A;
+}
+
+.tarjeta h3 {
+    color: #0F172A;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.tarjeta p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475569;
+}
+
+
+
+.porque-ftech {
+    background-color: #FFFFFF;
+    padding: 70px 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 36px;
+    color: #0F172A;
+    margin-bottom: 40px;
+}
+
+.ventajas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ventaja {
+    width: 280px;
+    text-align: center;
+    padding: 25px;
+}
+
+.ventaja h3 {
+    color: #0F172A;
+    font-size: 21px;
+}
+
+.ventaja p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+
+
+.como-trabajamos {
+    background-color: #F1F5F9;
+    padding: 70px 20px;
+}
+
+.pasos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.paso {
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+}
+
+.paso h3 {
+    color: #0F172A;
+    font-size: 21px;
+}
+
+.paso p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+.paso:hover span {
+    transform: scale(1.15);
+}
+
+.paso span {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #38BDF8;
+    transition: 0.3s;
+}
+
+
+.contacto {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contacto h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contacto p {
+    font-size: 18px;
+    color: #CBD5E1;
+    margin-bottom: 30px;
+}
+
+
+.footer {
+    background-color: #0F172A;
+    color: #CBD5E1;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .tarjeta {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .ventaja {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .paso {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+}
