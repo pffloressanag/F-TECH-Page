@@ -1,231 +1,597 @@
-body {
+/* =========================================================
+   F-TECH
+   Tu tecnología en manos expertas
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
+html {
+    scroll-behavior: smooth;
 }
 
-header p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 25px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0f172a;
     line-height: 1.6;
 }
 
-.logo{
-    width: 250px;
-    border-radius: 500px;
-}
 
-.btn {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 14px 28px;
+/* =========================================================
+   2. ELEMENTOS GENERALES
+   ========================================================= */
+
+a {
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover {
-    background-color: #128C7E;
-    transform: translateY(-3px);
+img {
+    max-width: 100%;
+    display: block;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    margin: 0 0 15px;
+.seccion-contenido {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
-.servicios {
-    background-color: #F1F5F9;
-    padding: 70px 20px;
-}
-
-.titulo-servicios {
+.etiqueta {
     text-align: center;
-    font-size: 36px;
-    color: #0F172A;
-    margin-bottom: 40px;
+    color: #0284c7;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.contenedor-servicios {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.tarjeta {
-    background-color: white;
-    color: #0F172A;
-    width: 280px;
-    padding: 25px;
-    border-radius: 15px;
-    border: 2px solid #38BDF8;
-    border-top: 4px solid #38BDF8;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transition: 0.3s;
-}
-
-.tarjeta:hover {
-    transform: translateY(-8px);
-    border-color: #0F172A;
-}
-
-.tarjeta h3 {
-    color: #0F172A;
-    font-size: 20px;
-    margin-top: 0;
-}
-
-.tarjeta p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #475569;
-}
-
-
-
-.porque-ftech {
-    background-color: #FFFFFF;
-    padding: 70px 20px;
+.etiqueta-clara {
+    color: #38bdf8;
 }
 
 .titulo-seccion {
     text-align: center;
-    font-size: 36px;
-    color: #0F172A;
-    margin-bottom: 40px;
+    font-size: 38px;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.descripcion-seccion {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+    color: #475569;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   3. BOTONES
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   4. PORTADA / HERO
+   ========================================================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #0f172a 50%,
+        #172554 100%
+    );
+
+    color: #ffffff;
+    text-align: center;
+    padding: 55px 20px 75px;
+}
+
+.logo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.hero-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.marca {
+    color: #38bdf8;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-texto {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 19px;
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   5. SERVICIOS
+   ========================================================= */
+
+.servicios {
+    background-color: #f1f5f9;
+    padding: 80px 20px;
+}
+
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 18px;
+    border-top: 4px solid #38bdf8;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.15);
+}
+
+.icono {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #0f172a;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #475569;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   6. SOBRE F-TECH
+   ========================================================= */
+
+.sobre-ftech {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.sobre-contenido {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-texto .etiqueta {
+    text-align: left;
+}
+
+.sobre-texto .titulo-seccion {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.sobre-texto p {
+    color: #475569;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.sobre-destacado {
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #172554
+    );
+
+    color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+}
+
+.destacado-icono {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.sobre-destacado h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.sobre-destacado p {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   7. POR QUÉ ELEGIR F-TECH
+   ========================================================= */
+
+.porque-ftech {
+    background-color: #f8fafc;
+    padding: 80px 20px;
 }
 
 .ventajas {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
 }
 
 .ventaja {
-    width: 280px;
     text-align: center;
     padding: 25px;
 }
 
+.ventaja-icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
 .ventaja h3 {
-    color: #0F172A;
+    color: #0f172a;
     font-size: 21px;
+    margin-bottom: 12px;
 }
 
 .ventaja p {
     color: #475569;
-    line-height: 1.6;
 }
 
 
+/* =========================================================
+   8. CÓMO TRABAJAMOS
+   ========================================================= */
 
 .como-trabajamos {
-    background-color: #F1F5F9;
-    padding: 70px 20px;
+    background-color: #f1f5f9;
+    padding: 80px 20px;
 }
 
 .pasos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
 }
 
 .paso {
-    width: 280px;
+    position: relative;
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 18px;
     text-align: center;
-    padding: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.numero {
+    display: inline-block;
+    font-size: 34px;
+    font-weight: bold;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.paso-icono {
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 .paso h3 {
-    color: #0F172A;
+    color: #0f172a;
     font-size: 21px;
+    margin-bottom: 10px;
 }
 
 .paso p {
     color: #475569;
-    line-height: 1.6;
 }
 
-.paso:hover span {
-    transform: scale(1.15);
+
+/* =========================================================
+   9. ACLARACIÓN DEL SERVICIO
+   ========================================================= */
+
+.aclaracion {
+    background-color: #e0f2fe;
+    padding: 45px 20px;
 }
 
-.paso span {
-    display: inline-block;
-    font-size: 32px;
-    font-weight: bold;
-    color: #38BDF8;
-    transition: 0.3s;
+.aclaracion-contenido {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+.aclaracion-icono {
+    font-size: 42px;
+    flex-shrink: 0;
+}
+
+.aclaracion h2 {
+    color: #0f172a;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.aclaracion p {
+    color: #334155;
+}
+
+
+/* =========================================================
+   10. CONTACTO
+   ========================================================= */
 
 .contacto {
-    background-color: #000000;
-    color: white;
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #0f172a
+    );
+
+    color: #ffffff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px;
+}
+
+.contacto-contenido {
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 .contacto h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .contacto p {
+    color: #cbd5e1;
     font-size: 18px;
-    color: #CBD5E1;
     margin-bottom: 30px;
 }
 
-
-.footer {
-    background-color: #0F172A;
-    color: #CBD5E1;
-    text-align: center;
-    padding: 30px 20px;
+.btn-contacto {
+    font-size: 17px;
 }
 
-.footer p {
+
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
+
+.footer {
+    background-color: #020617;
+    color: #cbd5e1;
+    padding: 45px 20px 20px;
+}
+
+.footer-contenido {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-marca h3 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.footer-marca p {
+    color: #94a3b8;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info p {
     margin: 5px 0;
 }
 
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #64748b;
+}
 
 
+/* =========================================================
+   12. RESPONSIVE - TABLETS
+   ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
-    .tarjeta {
-        width: 100%;
-        max-width: 280px;
+    .contenedor-servicios {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .ventaja {
-        width: 100%;
-        max-width: 280px;
+    .sobre-contenido {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .paso {
-        width: 100%;
-        max-width: 280px;
+    .ventajas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pasos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   13. RESPONSIVE - CELULARES
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 40px 20px 60px;
     }
 
     .logo {
-        width: 160px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-texto {
+        font-size: 17px;
+    }
+
+    .titulo-seccion {
+        font-size: 30px;
+    }
+
+    .descripcion-seccion {
+        font-size: 16px;
+    }
+
+    .contenedor-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .ventajas {
+        grid-template-columns: 1fr;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-texto .titulo-seccion {
+        text-align: center;
+    }
+
+    .sobre-texto .etiqueta {
+        text-align: center;
+    }
+
+    .aclaracion-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contacto h2 {
+        font-size: 32px;
+    }
+
+    .contacto p {
+        font-size: 16px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   14. CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .logo {
+        width: 145px;
+        height: 145px;
+    }
+
+    .btn {
+        padding: 13px 22px;
+        font-size: 15px;
+    }
+
+    .titulo-seccion {
+        font-size: 27px;
+    }
+
+    .tarjeta,
+    .paso {
+        padding: 25px 20px;
     }
 
 }
